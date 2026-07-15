@@ -1,0 +1,33 @@
+name: gateflow_workspace
+
+packages:
+  - apps/**
+  - packages/**
+  - packages/features/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    run: melos exec -- "flutter analyze --fatal-infos"
+    description: Static analysis across every package — run before every PR.
+
+  test:
+    run: melos exec --dir-exists=test -- "flutter test --coverage"
+    description: Unit + bloc tests, package by package (only packages with a test/ dir).
+
+  format:
+    run: melos exec -- "dart format --set-exit-if-changed ."
+    description: Enforce formatting across the whole workspace.
+
+  build_runner:
+    run: melos exec --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+    description: >
+      Regenerate all *.g.dart / *.config.dart files (Drift tables,
+      injectable DI graphs, freezed models) across every package that
+      needs codegen.
+
+  clean:
+    run: melos exec -- "flutter clean"

@@ -1,0 +1,19 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+# very_good_analysis is deliberately stricter than flutter_lints —
+# with 100+ screens and many contributors, a strict, shared lint set
+# catches inconsistencies in code review instead of relying on every
+# reviewer noticing them by eye. Every package in this workspace
+# includes this same root file (relative `include:` from each
+# package's own analysis_options.yaml) so there is exactly one lint
+# policy for the whole app, not one per feature.
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.config.dart'
+    - '**/*.freezed.dart'
+
+linter:
+  rules:
+    public_member_api_docs: false
+    lines_longer_than_80_chars: false

@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  analyze_and_test:
+    name: Analyze & test every package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: stable
+      - run: dart pub global activate melos
+      - run: melos bootstrap
+      - run: melos run build_runner
+      - run: melos run format
+      - run: melos run analyze
+      - run: melos run test
+
+  # Each build job is independent and only depends on analyze_and_test
+  # passing — a failing Windows build, say, never blocks merging a
+  # change that only touches Android, and vice versa.
+  build_android:
+    needs: analyze_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { flutter-version: '3.24.0', channel: stable }
+      - run: flutter pub get
+        working-directory: apps/gateflow_app
+      - run: flutter build apk --flavor dev -t lib/main_dev.dart
+        working-directory: apps/gateflow_app
+
+  build_ios:
+    needs: analyze_and_test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { flutter-version: '3.24.0', channel: stable }
+      - run: flutter pub get
+        working-directory: apps/gateflow_app
+      - run: flutter build ios --no-codesign -t lib/main_dev.dart
+        working-directory: apps/gateflow_app
+
+  build_web:
+    needs: analyze_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { flutter-version: '3.24.0', channel: stable }
+      - run: flutter pub get
+        working-directory: apps/gateflow_app
+      - run: flutter build web -t lib/main_dev.dart
+        working-directory: apps/gateflow_app
+
+  build_windows:
+    needs: analyze_and_test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { flutter-version: '3.24.0', channel: stable }
+      - run: flutter config --enable-windows-desktop
+      - run: flutter pub get
+        working-directory: apps/gateflow_app
+      - run: flutter build windows -t lib/main_dev.dart
+        working-directory: apps/gateflow_app
+
+  build_macos:
+    needs: analyze_and_test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { flutter-version: '3.24.0', channel: stable }
+      - run: flutter config --enable-macos-desktop
+      - run: flutter pub get
+        working-directory: apps/gateflow_app
+      - run: flutter build macos -t lib/main_dev.dart
+        working-directory: apps/gateflow_app

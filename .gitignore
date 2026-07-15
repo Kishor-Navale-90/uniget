@@ -1,0 +1,37 @@
+# Flutter / Dart
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/build/
+**/pubspec.lock
+!/pubspec.lock
+.pub-cache/
+.pub/
+
+# Generated code — regenerate with `melos run build_runner`
+**/*.g.dart
+**/*.freezed.dart
+**/*.config.dart
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.iml
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+
+# Platform build artifacts
+**/android/.gradle/
+**/ios/Pods/
+**/ios/.symlinks/
+**/windows/flutter/ephemeral/
+**/macos/Flutter/ephemeral/
+**/web/
+
+# Env / secrets
+env/*.json
+*.env
