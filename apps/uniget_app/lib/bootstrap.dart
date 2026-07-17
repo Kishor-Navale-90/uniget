@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app.dart';
 import 'di/injection.dart';
@@ -20,6 +21,10 @@ Future<void> bootstrap() async {
     () async {
       WidgetsFlutterBinding.ensureInitialized();
       await _initializeFirebaseIfSupported();
+      // Must run before configureDependencies() — CoreModule's
+      // SupabaseClient provider reads Supabase.instance.client, which
+      // only exists once this resolves (see supabase/README.md).
+      await Supabase.initialize(url: AppConstants.supabaseUrl, anonKey: AppConstants.supabaseAnonKey);
       await configureDependencies();
       runApp(const UnigetApp());
     },
