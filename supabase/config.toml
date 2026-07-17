@@ -1,0 +1,55 @@
+project_id = "uniget"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+# Must match the linked remote project's Postgres major version (see
+# `supabase projects list` — this project reports engine 17).
+major_version = 17
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+# No self-service sign-up (see docs/api/auth.md — "no SSO and no
+# self-service sign-up"): accounts are pre-added by an admin as
+# unconfirmed shadow users (see functions/admin-add-employee), then
+# activated via OTP + set-password. Blocking sign_up here stops
+# `supabase.auth.signInWithOtp(shouldCreateUser: true)` or any other
+# client call from ever being able to mint a brand-new identity.
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+double_confirm_changes = true
+enable_confirmations = false
+# OTP codes are 6 digits, valid for 10 minutes — matches auth.md's
+# recommended registrationToken-equivalent TTL for the activation step.
+otp_length = 6
+otp_expiry = 600
+
+# Rate-limit how often a given email can request a new OTP — backs
+# auth.md's `otp/request` 429 behaviour. Tune from the dashboard
+# (Auth > Rate Limits) once linked to a real project; local defaults
+# shown here for reference.
+[auth.rate_limit]
+sign_in_sign_ups = 30
+token_refresh = 150
+# OTP / magic-link verification attempts — backs auth.md's `otp/verify`.
+token_verifications = 30
+
+# Custom SMTP is configured per-project from the Supabase Dashboard
+# (Project Settings > Auth > SMTP Settings) or via `supabase secrets
+# set` + linking your provider — see supabase/README.md. Local dev
+# uses the built-in local mail catcher below.
+[local_smtp]
+enabled = true
+port = 54324

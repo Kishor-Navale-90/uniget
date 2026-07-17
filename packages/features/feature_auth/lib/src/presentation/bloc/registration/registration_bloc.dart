@@ -59,12 +59,8 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
     );
     result.when(
       failure: (f) => emit(state.copyWith(status: RegistrationStatus.failure, errorMessage: f.message)),
-      success: (registrationToken) => emit(
-        state.copyWith(
-          status: RegistrationStatus.idle,
-          step: RegistrationStep.setPassword,
-          registrationToken: registrationToken,
-        ),
+      success: (_) => emit(
+        state.copyWith(status: RegistrationStatus.idle, step: RegistrationStep.setPassword),
       ),
     );
   }
@@ -74,9 +70,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
     Emitter<RegistrationState> emit,
   ) async {
     emit(state.copyWith(status: RegistrationStatus.submitting));
-    final result = await _setPassword(
-      SetPasswordParams(registrationToken: state.registrationToken ?? '', password: event.password),
-    );
+    final result = await _setPassword(SetPasswordParams(password: event.password));
     result.when(
       failure: (f) => emit(state.copyWith(status: RegistrationStatus.failure, errorMessage: f.message)),
       // The repository already persisted the session on success — the

@@ -20,7 +20,7 @@ class _MockSetPassword extends Mock implements SetPassword {}
 void main() {
   setUpAll(() {
     registerFallbackValue(const VerifyRegistrationOtpParams(email: '', otp: ''));
-    registerFallbackValue(const SetPasswordParams(registrationToken: '', password: ''));
+    registerFallbackValue(const SetPasswordParams(password: ''));
   });
 
   late _MockCheckRegistrationEmail checkRegistrationEmail;
@@ -83,7 +83,7 @@ void main() {
     'moves to the setPassword step once the OTP is verified',
     seed: () => const RegistrationState(step: RegistrationStep.verifyOtp, email: 'r@company.com'),
     setUp: () {
-      when(() => verifyRegistrationOtp(any())).thenAnswer((_) async => const Right('reg-token'));
+      when(() => verifyRegistrationOtp(any())).thenAnswer((_) async => const Right(unit));
     },
     build: buildBloc,
     act: (bloc) => bloc.add(const RegistrationOtpSubmitted('123456')),
@@ -97,18 +97,13 @@ void main() {
         status: RegistrationStatus.idle,
         step: RegistrationStep.setPassword,
         email: 'r@company.com',
-        registrationToken: 'reg-token',
       ),
     ],
   );
 
   blocTest<RegistrationBloc, RegistrationState>(
     'completes the wizard once the password is set',
-    seed: () => const RegistrationState(
-      step: RegistrationStep.setPassword,
-      email: 'r@company.com',
-      registrationToken: 'reg-token',
-    ),
+    seed: () => const RegistrationState(step: RegistrationStep.setPassword, email: 'r@company.com'),
     setUp: () {
       when(() => setPassword(any())).thenAnswer((_) async => const Right(user));
     },
@@ -119,13 +114,11 @@ void main() {
         status: RegistrationStatus.submitting,
         step: RegistrationStep.setPassword,
         email: 'r@company.com',
-        registrationToken: 'reg-token',
       ),
       const RegistrationState(
         status: RegistrationStatus.idle,
         step: RegistrationStep.completed,
         email: 'r@company.com',
-        registrationToken: 'reg-token',
       ),
     ],
   );

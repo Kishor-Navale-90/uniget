@@ -14,17 +14,14 @@ class SetPassword implements UseCase<AppUser, SetPasswordParams> {
   final AuthRepository _repository;
 
   @override
-  Future<Either<Failure, AppUser>> call(SetPasswordParams params) => _repository.setPassword(
-        registrationToken: params.registrationToken,
-        password: params.password,
-      );
+  Future<Either<Failure, AppUser>> call(SetPasswordParams params) =>
+      _repository.setPassword(password: params.password);
 }
 
 class SetPasswordParams extends Equatable {
-  const SetPasswordParams({required this.registrationToken, required this.password});
-  final String registrationToken;
+  const SetPasswordParams({required this.password});
   final String password;
 
   @override
-  List<Object?> get props => [registrationToken, password];
+  List<Object?> get props => [password];
 }

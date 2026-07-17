@@ -1,6 +1,7 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 
 import '../bloc/asset_list/asset_list_bloc.dart';
 import '../bloc/asset_list/asset_list_event.dart';
@@ -21,7 +22,7 @@ class AssetListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => context.read<AssetListBloc>()
+      create: (_) => GetIt.instance<AssetListBloc>()
         ..add(AssetListSubscriptionRequested(departmentId: departmentId)),
       child: Scaffold(
         appBar: AppBar(title: const Text('Asset Register')),

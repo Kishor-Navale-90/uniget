@@ -5,15 +5,15 @@ import 'package:injectable/injectable.dart';
 
 import '../repositories/auth_repository.dart';
 
-/// Returns a short-lived registration token (not a session token) that
-/// authorizes the following [SetPassword] call.
+/// Verifies the OTP, establishing the session that authorizes the
+/// following [SetPassword] call.
 @injectable
-class VerifyRegistrationOtp implements UseCase<String, VerifyRegistrationOtpParams> {
+class VerifyRegistrationOtp implements UseCase<Unit, VerifyRegistrationOtpParams> {
   VerifyRegistrationOtp(this._repository);
   final AuthRepository _repository;
 
   @override
-  Future<Either<Failure, String>> call(VerifyRegistrationOtpParams params) =>
+  Future<Either<Failure, Unit>> call(VerifyRegistrationOtpParams params) =>
       _repository.verifyRegistrationOtp(email: params.email, otp: params.otp);
 }
 
