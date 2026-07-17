@@ -1,11 +1,12 @@
 name: design_system
-description: Shared, adaptive UI kit (widgets + design tokens) used by every GateFlow feature package so 100+ screens look and behave consistently across mobile, desktop, and web.
+description: Shared, adaptive UI kit (widgets + design tokens) used by every UNIGET feature package so 100+ screens look and behave consistently across mobile, desktop, and web.
 version: 0.1.0
 publish_to: 'none'
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
   flutter: '>=3.19.0'
+resolution: workspace
 
 dependencies:
   flutter:

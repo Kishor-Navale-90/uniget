@@ -22,25 +22,50 @@ class AuthRepositoryImpl implements AuthRepository {
   final NetworkInfo _networkInfo;
 
   @override
-  Future<Either<Failure, AppUser>> loginWithSso(String ssoIdToken) =>
-      _completeLogin(() => _remote.loginWithSso(ssoIdToken));
-
-  @override
-  Future<Either<Failure, AppUser>> requestOtp(String email) async {
+  Future<Either<Failure, Unit>> checkRegistrationEmail(String email) async {
     if (!await _networkInfo.isConnected) return const Left(NetworkFailure());
     try {
-      await _remote.requestOtp(email);
-      // No user/token yet — this only triggers the SMS/email OTP send;
-      // the UI moves to the "enter code" step and calls verifyOtp next.
-      return const Left(ValidationFailure('OTP sent — awaiting verification code'));
+      await _remote.checkRegistrationEmail(email);
+      return const Right(unit);
     } on ServerException catch (e) {
       return Left(ServerFailure(e.message, code: e.statusCode?.toString()));
     }
   }
 
   @override
-  Future<Either<Failure, AppUser>> verifyOtp({required String email, required String otp}) =>
-      _completeLogin(() => _remote.verifyOtp(email: email, otp: otp));
+  Future<Either<Failure, Unit>> requestRegistrationOtp(String email) async {
+    if (!await _networkInfo.isConnected) return const Left(NetworkFailure());
+    try {
+      await _remote.requestRegistrationOtp(email);
+      return const Right(unit);
+    } on ServerException catch (e) {
+      return Left(ServerFailure(e.message, code: e.statusCode?.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, String>> verifyRegistrationOtp({required String email, required String otp}) async {
+    if (!await _networkInfo.isConnected) return const Left(NetworkFailure());
+    try {
+      final registrationToken = await _remote.verifyRegistrationOtp(email: email, otp: otp);
+      return Right(registrationToken);
+    } on ServerException catch (e) {
+      return Left(ServerFailure(e.message, code: e.statusCode?.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, AppUser>> setPassword({
+    required String registrationToken,
+    required String password,
+  }) =>
+      _completeLogin(
+        () => _remote.setPassword(registrationToken: registrationToken, password: password),
+      );
+
+  @override
+  Future<Either<Failure, AppUser>> loginWithPassword({required String email, required String password}) =>
+      _completeLogin(() => _remote.loginWithPassword(email: email, password: password));
 
   /// Shared tail of every successful login path: cache the user,
   /// persist the session (token + role + department claims), return

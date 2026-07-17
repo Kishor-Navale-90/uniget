@@ -51,15 +51,29 @@ class SessionManager {
     }
   }
 
-  static const _tokenKey = 'gateflow_token';
-  static const _roleKey = 'gateflow_role';
-  static const _departmentKey = 'gateflow_department';
+  static const _tokenKey = 'uniget_token';
+  static const _roleKey = 'uniget_role';
+  static const _departmentKey = 'uniget_department';
 }
 
-/// Mirrors Part I §7.1 of the concept document — kept in `core` because
-/// route guards, the API auth header, and every feature's RBAC
-/// filtering all need the same enum.
-enum UserRole { superAdmin, departmentAdmin, approver, security, visitor }
+/// The 6 UNIGET roles — kept in `core` because route guards, the API
+/// auth header, and every feature's RBAC filtering all need the same
+/// enum. Visitors are deliberately not a role here: they never get a
+/// persistent account, only a short-lived guest session handled
+/// entirely outside this enum (see `feature_visitor_management`).
+///
+/// - [superAdmin] — org-wide, every department, every screen.
+/// - [manager] — approves gate-pass/asset requests for their own
+///   reporting line (the concept doc's "PM"/"Approver").
+/// - [itAdmin] — owns the asset register and issues gate passes once a
+///   [manager] has approved a request.
+/// - [adminTeam] — Reception/Admin: verifies visitor requests and
+///   hands them off to Building Management.
+/// - [security] — org-wide, site-scoped (not department-scoped): scans
+///   and verifies gate passes/visitor badges at the gate.
+/// - [employee] — raises gate-pass/visitor requests, views their own
+///   assets and request history.
+enum UserRole { superAdmin, manager, itAdmin, adminTeam, security, employee }
 
 class AppSession {
   const AppSession({required this.token, required this.role, this.departmentId});

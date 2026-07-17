@@ -1,9 +1,12 @@
-# GateFlow — Architecture Rationale
+# UNIGET — Architecture Rationale
 
 This document explains *why* the project is shaped the way it is. For
 *how to run it*, see `README.md`. For the product requirements this
 architecture serves, see the companion `GateFlow_Combined_Concept_and_Architecture.docx`
-and `GATEFLOW_PROJECT_CONTEXT.md`.
+and `GATEFLOW_PROJECT_CONTEXT.md` (the original concept documents this
+project started from — role names and some workflows have since
+evolved under the UNIGET brand, see the per-module `docs/api/*.md`
+contracts for the current source of truth).
 
 ## Why a monorepo of packages, not one big app
 
@@ -15,7 +18,7 @@ reach into Asset Management's internals" other than by convention, and
 CI has to rebuild/retest everything for every change.
 
 Splitting into **Melos-managed packages** (`core`, `design_system`, one
-package per feature, and the `apps/gateflow_app` shell) fixes all
+package per feature, and the `apps/uniget_app` shell) fixes all
 three: package boundaries are enforced by the Dart compiler, not code
 review discipline; a feature package's public surface is exactly its
 barrel file (`feature_x.dart`) — everything under `src/` is invisible
@@ -84,7 +87,7 @@ Every injectable class is annotated at its declaration
 third-party types) — nobody hand-writes a giant `GetIt` registration
 file. `injectable_generator` scans every package the app depends on
 and generates `injection.config.dart` at the app-shell composition
-root (`apps/gateflow_app/lib/di/injection.dart`).
+root (`apps/uniget_app/lib/di/injection.dart`).
 
 This is what makes feature package addition/removal a one-line
 `pubspec.yaml` change (see README, "Adding feature #101") instead of a
@@ -151,7 +154,7 @@ writing a new, small Bloc, not extending an existing 500-line one.
 
 `design_system`'s `AdaptiveScaffold` renders a bottom nav bar on mobile
 and a nav rail on desktop/web from the *same* destination list and the
-*same* route tree (`apps/gateflow_app/lib/routing/app_router.dart`).
+*same* route tree (`apps/uniget_app/lib/routing/app_router.dart`).
 Screens are written once; `core/theme/responsive.dart`'s breakpoints
 decide layout, not a forked widget tree per platform. This is what
 makes "100+ screens, 5 platforms" tractable — it is not 500 screens.

@@ -2,7 +2,7 @@ import 'package:drift/drift.dart' show Value;
 
 import '../../domain/entities/asset.dart';
 import '../../domain/entities/asset_status.dart';
-import '../local/asset_table.dart';
+import '../local/asset_local_database.dart';
 
 /// Maps between three shapes: the remote API's JSON, the local Drift
 /// row (`AssetTableData`), and the domain `Asset` entity. Keeping all

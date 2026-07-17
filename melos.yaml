@@ -1,4 +1,4 @@
-name: gateflow_workspace
+name: uniget_workspace
 
 packages:
   - apps/**

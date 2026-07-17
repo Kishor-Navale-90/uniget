@@ -1,6 +1,6 @@
-# GateFlow — Flutter Monorepo
+# UNIGET — Flutter Monorepo
 
-Enterprise-grade Flutter project structure for GateFlow (Asset Register
+Enterprise-grade Flutter project structure for UNIGET (Asset Register
 & Lifecycle Management + Gate Pass Approval & Material Movement
 Control + Visitor Management & Smart Reception), targeting **Android,
 iOS, Web, Windows, and macOS** from one codebase.
@@ -16,7 +16,7 @@ this file is the "how do I run it" quick start.
 ```
 gateflow_flutter/
 ├── apps/
-│   └── gateflow_app/          # The runnable app shell — composition root for DI + routing.
+│   └── uniget_app/            # The runnable app shell — composition root for DI + routing.
 ├── packages/
 │   ├── core/                  # Error handling, networking, offline DB/sync, DI, theming, RBAC.
 │   ├── design_system/         # Shared adaptive widgets + design tokens.
@@ -43,7 +43,7 @@ melos bootstrap
 melos run build_runner
 
 # 4. Run the app (dev flavor) on your platform of choice.
-cd apps/gateflow_app
+cd apps/uniget_app
 flutter run -t lib/main_dev.dart -d chrome      # Web
 flutter run -t lib/main_dev.dart -d macos       # macOS
 flutter run -t lib/main_dev.dart -d windows     # Windows
@@ -64,8 +64,8 @@ flutter run -t lib/main_dev.dart -d <device-id> # Android / iOS
 1. Copy `packages/features/feature_asset_management` as a starting
    point — rename the package, and gut the `data`/`domain`/`presentation`
    contents for your new entity.
-2. Add the new package path to `apps/gateflow_app/pubspec.yaml`.
-3. Add its routes to `apps/gateflow_app/lib/routing/app_router.dart`.
+2. Add the new package path to `apps/uniget_app/pubspec.yaml`.
+3. Add its routes to `apps/uniget_app/lib/routing/app_router.dart`.
 4. Run `melos bootstrap && melos run build_runner`.
 
 No other package needs to change — that isolation is the point (see

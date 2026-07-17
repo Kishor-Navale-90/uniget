@@ -33,9 +33,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with: { flutter-version: '3.24.0', channel: stable }
       - run: flutter pub get
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
       - run: flutter build apk --flavor dev -t lib/main_dev.dart
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
 
   build_ios:
     needs: analyze_and_test
@@ -45,9 +45,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with: { flutter-version: '3.24.0', channel: stable }
       - run: flutter pub get
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
       - run: flutter build ios --no-codesign -t lib/main_dev.dart
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
 
   build_web:
     needs: analyze_and_test
@@ -57,9 +57,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with: { flutter-version: '3.24.0', channel: stable }
       - run: flutter pub get
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
       - run: flutter build web -t lib/main_dev.dart
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
 
   build_windows:
     needs: analyze_and_test
@@ -70,9 +70,9 @@ jobs:
         with: { flutter-version: '3.24.0', channel: stable }
       - run: flutter config --enable-windows-desktop
       - run: flutter pub get
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
       - run: flutter build windows -t lib/main_dev.dart
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
 
   build_macos:
     needs: analyze_and_test
@@ -83,6 +83,6 @@ jobs:
         with: { flutter-version: '3.24.0', channel: stable }
       - run: flutter config --enable-macos-desktop
       - run: flutter pub get
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app
       - run: flutter build macos -t lib/main_dev.dart
-        working-directory: apps/gateflow_app
+        working-directory: apps/uniget_app

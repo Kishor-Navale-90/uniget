@@ -1,7 +1,35 @@
-name: gateflow_workspace
+name: uniget_workspace
 publish_to: 'none'
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
+
+# Native Dart pub workspace (Dart 3.6+) — required alongside melos, not
+# instead of it. Without this, `dart run build_runner build` inside any
+# single package (e.g. apps/uniget_app) only has visibility into that
+# package's own `.dart_tool/build` cache, so injectable_generator's
+# app-level aggregator (`injection.config.dart`) can never see any
+# `@injectable`/`@LazySingleton` class from `core` or any feature
+# package — GetIt ends up completely empty at runtime. A pub workspace
+# gives every member package a single shared `.dart_tool`, so one
+# combined build_runner pass actually aggregates the whole graph, which
+# is what every `@InjectableInit` doc comment in this repo already
+# assumed was happening.
+workspace:
+  - apps/uniget_app
+  - packages/core
+  - packages/design_system
+  - packages/features/feature_auth
+  - packages/features/feature_asset_management
+  - packages/features/feature_gate_pass
+  - packages/features/feature_visitor_management
 
 dev_dependencies:
   melos: ^6.1.0
+
+# Under workspace resolution, dependency_overrides can only be declared
+# here (member packages can't have their own). Without pinning
+# dart_style, packages that combine `drift_dev` + `bloc_test` resolve a
+# dart_style version requiring newer analyzer APIs than the resolved
+# analyzer has, breaking build_runner's AOT-compiled build script.
+dependency_overrides:
+  dart_style: 3.1.1

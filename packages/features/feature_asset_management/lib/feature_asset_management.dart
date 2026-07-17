@@ -14,3 +14,5 @@ export 'src/presentation/bloc/asset_transfer/asset_transfer_event.dart';
 export 'src/presentation/bloc/asset_transfer/asset_transfer_state.dart';
 export 'src/presentation/pages/asset_list_page.dart';
 export 'src/presentation/pages/asset_detail_page.dart';
+export 'src/di/asset_injection.dart';
+export 'src/di/asset_injection.module.dart';

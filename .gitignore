@@ -4,6 +4,7 @@
 **/.flutter-plugins-dependencies
 **/.packages
 **/build/
+**/coverage/
 **/pubspec.lock
 !/pubspec.lock
 .pub-cache/
@@ -30,7 +31,6 @@
 **/ios/.symlinks/
 **/windows/flutter/ephemeral/
 **/macos/Flutter/ephemeral/
-**/web/
 
 # Env / secrets
 env/*.json

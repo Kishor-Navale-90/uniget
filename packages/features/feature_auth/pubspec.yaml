@@ -1,11 +1,12 @@
 name: feature_auth
-description: Employee SSO/OTP login, visitor guest sessions, and session bootstrapping (concept doc Part I §8).
+description: Employee registration (admin-pre-added email → OTP → set password), email+password login, and session bootstrapping.
 version: 0.1.0
 publish_to: 'none'
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
   flutter: '>=3.19.0'
+resolution: workspace
 
 dependencies:
   flutter:
@@ -18,6 +19,7 @@ dependencies:
   dio: ^5.5.0
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
+  go_router: ^14.2.7
   core:
     path: ../../core
   design_system:
