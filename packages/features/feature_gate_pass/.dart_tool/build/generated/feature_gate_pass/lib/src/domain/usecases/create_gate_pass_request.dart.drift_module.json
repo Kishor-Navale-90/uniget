@@ -1,0 +1,10 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:equatable/equatable.dart",
+    "package:fpdart/fpdart.dart",
+    "package:injectable/injectable.dart",
+    "package:feature_gate_pass/src/domain/repositories/gate_pass_repository.dart"
+  ]
+}

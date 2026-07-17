@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:design_system/design_system.dart",
+    "package:flutter/material.dart"
+  ]
+}

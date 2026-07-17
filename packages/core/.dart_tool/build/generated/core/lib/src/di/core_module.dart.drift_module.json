@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:connectivity_plus/connectivity_plus.dart",
+    "package:flutter_secure_storage/flutter_secure_storage.dart",
+    "package:injectable/injectable.dart"
+  ]
+}

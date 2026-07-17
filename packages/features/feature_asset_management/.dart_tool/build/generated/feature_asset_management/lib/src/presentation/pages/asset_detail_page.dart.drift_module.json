@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:design_system/design_system.dart",
+    "package:flutter/material.dart",
+    "package:flutter_bloc/flutter_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_event.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_state.dart"
+  ]
+}

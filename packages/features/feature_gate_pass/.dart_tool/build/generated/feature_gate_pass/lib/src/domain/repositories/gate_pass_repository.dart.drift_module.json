@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:fpdart/fpdart.dart",
+    "package:feature_gate_pass/src/domain/entities/gate_pass.dart"
+  ]
+}

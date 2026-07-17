@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:feature_gate_pass/src/domain/entities/gate_pass.dart",
+    "package:feature_gate_pass/src/domain/entities/gate_pass_status.dart",
+    "package:feature_gate_pass/src/domain/repositories/gate_pass_repository.dart",
+    "package:feature_gate_pass/src/presentation/pages/gate_pass_list_page.dart",
+    "package:feature_gate_pass/src/di/gate_pass_injection.dart",
+    "package:feature_gate_pass/src/di/gate_pass_injection.module.dart"
+  ]
+}

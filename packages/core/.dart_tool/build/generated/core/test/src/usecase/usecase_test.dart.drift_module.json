@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:fpdart/fpdart.dart",
+    "package:flutter_test/flutter_test.dart"
+  ]
+}

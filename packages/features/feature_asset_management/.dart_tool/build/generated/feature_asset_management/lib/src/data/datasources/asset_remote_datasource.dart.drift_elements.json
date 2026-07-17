@@ -1,0 +1,1 @@
+{"valid_import":true,"imports":[{"uri":"package:core/core.dart","transitive":false},{"uri":"package:dio/dio.dart","transitive":false},{"uri":"package:injectable/injectable.dart","transitive":false},{"uri":"package:feature_asset_management/src/data/models/asset_model.dart","transitive":false}],"elements":[]}

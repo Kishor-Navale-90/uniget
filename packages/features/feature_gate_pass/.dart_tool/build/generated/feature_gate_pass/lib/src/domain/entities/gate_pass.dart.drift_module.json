@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:equatable/equatable.dart",
+    "package:feature_gate_pass/src/domain/entities/gate_pass_status.dart"
+  ]
+}

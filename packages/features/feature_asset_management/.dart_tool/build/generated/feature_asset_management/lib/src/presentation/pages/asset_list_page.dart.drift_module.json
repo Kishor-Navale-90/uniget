@@ -1,0 +1,13 @@
+{
+  "elements": {},
+  "imports": [
+    "package:design_system/design_system.dart",
+    "package:flutter/material.dart",
+    "package:flutter_bloc/flutter_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_event.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_state.dart",
+    "package:feature_asset_management/src/presentation/widgets/asset_card.dart",
+    "package:feature_asset_management/src/presentation/pages/asset_detail_page.dart"
+  ]
+}

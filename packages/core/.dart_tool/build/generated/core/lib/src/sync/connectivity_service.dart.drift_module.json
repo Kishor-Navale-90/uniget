@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:injectable/injectable.dart",
+    "package:core/src/network/network_info.dart"
+  ]
+}

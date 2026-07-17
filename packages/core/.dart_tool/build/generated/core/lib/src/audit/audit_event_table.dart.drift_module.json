@@ -1,0 +1,257 @@
+{
+  "elements": {
+    "audit_event": {
+      "id": {
+        "library_uri": "package:core/src/audit/audit_event_table.dart",
+        "name": "audit_event"
+      },
+      "declaration": {
+        "source_uri": "package:core/src/audit/audit_event_table.dart",
+        "offset": 521,
+        "name": "AuditEvent"
+      },
+      "references": [],
+      "type": "table",
+      "columns": [
+        {
+          "sqlType": {
+            "builtin": "int"
+          },
+          "nullable": false,
+          "nameInSql": "id",
+          "nameInDart": "id",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 564,
+            "name": "id"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [
+            {
+              "type": "primary",
+              "is_auto_increment": true
+            }
+          ],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "module",
+          "nameInDart": "module",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 760,
+            "name": "module"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// e.g. \"Asset\", \"GatePass\", \"Visitor\", \"Employee\", \"Auth\" — which\n/// module this event belongs to, used to filter the Audit Log screen.",
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "event",
+          "nameInDart": "event",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 914,
+            "name": "event"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// Human-readable event description, e.g. \"Asset transferred\",\n/// \"Gate pass approved\", \"Visitor checked in\".",
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "entity_type",
+          "nameInDart": "entityType",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1049,
+            "name": "entityType"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// e.g. \"asset\", \"gate_pass\", \"visitor\" — mirrors [SyncQueue]'s\n/// `entityType` convention.",
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "entity_id",
+          "nameInDart": "entityId",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1091,
+            "name": "entityId"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "entity_label",
+          "nameInDart": "entityLabel",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1277,
+            "name": "entityLabel"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// Denormalized label (asset name, gate pass number, visitor name...)\n/// so the Audit/Movement Log screen never needs a cross-feature join.",
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "actor_id",
+          "nameInDart": "actorId",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1399,
+            "name": "actorId"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// Null for system-generated events (e.g. an auto-expiry sweep).",
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "actor_name",
+          "nameInDart": "actorName",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1448,
+            "name": "actorName"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "department_id",
+          "nameInDart": "departmentId",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1573,
+            "name": "departmentId"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// Null for org-wide events (e.g. raised by Super Admin or Security).",
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "dateTime"
+          },
+          "nullable": false,
+          "nameInSql": "created_at",
+          "nameInDart": "createdAt",
+          "declaration": {
+            "source_uri": "package:core/src/audit/audit_event_table.dart",
+            "offset": 1632,
+            "name": "createdAt"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": {
+            "elements": [
+              {
+                "lexeme": "currentDateAndTime",
+                "import_uri": "package:drift/src/runtime/query_builder/query_builder.dart"
+              }
+            ]
+          },
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        }
+      ],
+      "existing_data_class": null,
+      "table_constraints": [],
+      "custom_parent_class": null,
+      "interfaces_for_row_class": [],
+      "fixed_entity_info_name": null,
+      "base_dart_name": "AuditEvent",
+      "row_class_name": "AuditEventData",
+      "companion_class_name": null,
+      "without_rowid": false,
+      "strict": false,
+      "write_default_constraints": true,
+      "custom_constraints": [],
+      "attached_indices": []
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart"
+  ]
+}

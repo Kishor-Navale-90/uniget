@@ -1,0 +1,9 @@
+{
+  "elements": {},
+  "imports": [
+    "package:design_system/design_system.dart",
+    "package:flutter/material.dart",
+    "package:feature_asset_management/src/domain/entities/asset.dart",
+    "package:feature_asset_management/src/domain/entities/asset_status.dart"
+  ]
+}

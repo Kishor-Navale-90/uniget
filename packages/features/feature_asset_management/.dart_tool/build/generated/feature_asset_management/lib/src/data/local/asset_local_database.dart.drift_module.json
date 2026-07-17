@@ -1,0 +1,40 @@
+{
+  "elements": {
+    "AssetLocalDatabase": {
+      "id": {
+        "library_uri": "package:feature_asset_management/src/data/local/asset_local_database.dart",
+        "name": "AssetLocalDatabase"
+      },
+      "declaration": {
+        "source_uri": "package:feature_asset_management/src/data/local/asset_local_database.dart",
+        "offset": 569,
+        "name": "AssetLocalDatabase"
+      },
+      "references": [
+        {
+          "library_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+          "name": "asset_table"
+        }
+      ],
+      "type": "database",
+      "tables": [
+        {
+          "library_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+          "name": "asset_table"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "schema_version": 1,
+      "daos": [],
+      "has_constructor_arg": false
+    }
+  },
+  "imports": [
+    "package:core/core.dart",
+    "package:drift/drift.dart",
+    "package:injectable/injectable.dart",
+    "package:feature_asset_management/src/data/local/asset_table.dart"
+  ]
+}

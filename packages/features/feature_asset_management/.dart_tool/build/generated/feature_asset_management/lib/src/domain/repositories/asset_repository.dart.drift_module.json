@@ -1,0 +1,9 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:fpdart/fpdart.dart",
+    "package:feature_asset_management/src/domain/entities/asset.dart",
+    "package:feature_asset_management/src/domain/entities/asset_dashboard_stats.dart"
+  ]
+}

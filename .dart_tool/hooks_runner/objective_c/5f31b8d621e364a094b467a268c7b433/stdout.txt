@@ -1,0 +1,49 @@
+Running `(cd /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/; TMPDIR=/var/folders/7r/0p2_j84s3bdggvtyvkq7sqmr0000gp/T/ PATH=/Users/rupeshkumar/.antigravity/antigravity/bin:/Users/rupeshkumar/fvm/bin:/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin HOME=/Users/rupeshkumar /Users/rupeshkumar/Projects/Flutter_SDK/flutter_3.38.5/bin/cache/dart-sdk/bin/dart --packages=/Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/package_config.json /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/objective_c/5f31b8d621e364a094b467a268c7b433/hook.dill --config=/Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/objective_c/5f31b8d621e364a094b467a268c7b433/input.json )`.
+INFO: 2026-07-17 19:42:53.115334: Using compiler /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang from BuildInput.cCompiler.cc.
+
+INFO: 2026-07-17 19:42:53.117905: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/include/dart_api_dl.c -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-07-17 19:42:53.119197: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/objective_c.c -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.c.o
+
+INFO: 2026-07-17 19:42:53.119566: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/input_stream_adapter.m -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-07-17 19:42:53.119811: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/objective_c.m -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.m.o
+
+INFO: 2026-07-17 19:42:53.119929: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/observer.m -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/observer.m.o
+
+INFO: 2026-07-17 19:42:53.120210: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/ns_number.m -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/ns_number.m.o
+
+INFO: 2026-07-17 19:42:53.120408: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/protocol.m -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/protocol.m.o
+
+INFO: 2026-07-17 19:42:53.120699: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/rupeshkumar/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/objective_c_bindings_generated.m -fpic -gline-tables-only -I src -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-07-17 19:42:53.241439: 
+INFO: 2026-07-17 19:42:53.241500: 
+INFO: 2026-07-17 19:42:53.241523: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-07-17 19:42:53.242040: 
+INFO: 2026-07-17 19:42:53.242059: 
+INFO: 2026-07-17 19:42:53.242067: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.c.o
+
+INFO: 2026-07-17 19:42:53.254087: 
+INFO: 2026-07-17 19:42:53.254098: 
+INFO: 2026-07-17 19:42:53.254106: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/protocol.m.o
+
+INFO: 2026-07-17 19:42:53.720533: 
+INFO: 2026-07-17 19:42:53.720588: 
+INFO: 2026-07-17 19:42:53.720608: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/ns_number.m.o
+
+INFO: 2026-07-17 19:42:53.734290: 
+INFO: 2026-07-17 19:42:53.734321: 
+INFO: 2026-07-17 19:42:53.734329: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-07-17 19:42:53.742191: 
+INFO: 2026-07-17 19:42:53.742218: 
+INFO: 2026-07-17 19:42:53.742225: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-07-17 19:42:53.742452: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -shared -Wl,-encryptable -undefined dynamic_lookup -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/include/dart_api_dl.c.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.c.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/input_stream_adapter.m.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.m.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/observer.m.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/ns_number.m.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/protocol.m.o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c_bindings_generated.m.o -o /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/objective_c.dylib
+
+INFO: 2026-07-17 19:42:53.849599: 
+INFO: 2026-07-17 19:42:53.849645: 
+INFO: 2026-07-17 19:42:53.849654: Generated /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/objective_c.dylib
+

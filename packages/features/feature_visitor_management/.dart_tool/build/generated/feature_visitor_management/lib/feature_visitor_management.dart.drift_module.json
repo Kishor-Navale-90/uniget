@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:feature_visitor_management/src/domain/entities/visitor.dart",
+    "package:feature_visitor_management/src/domain/entities/visitor_status.dart",
+    "package:feature_visitor_management/src/domain/repositories/visitor_repository.dart",
+    "package:feature_visitor_management/src/presentation/pages/visitor_checkin_page.dart",
+    "package:feature_visitor_management/src/di/visitor_injection.dart",
+    "package:feature_visitor_management/src/di/visitor_injection.module.dart"
+  ]
+}

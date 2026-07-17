@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:dio/dio.dart",
+    "package:injectable/injectable.dart",
+    "package:core/src/constants/app_constants.dart",
+    "package:core/src/network/interceptors/auth_interceptor.dart",
+    "package:core/src/network/interceptors/logging_interceptor.dart",
+    "package:core/src/network/interceptors/retry_interceptor.dart"
+  ]
+}

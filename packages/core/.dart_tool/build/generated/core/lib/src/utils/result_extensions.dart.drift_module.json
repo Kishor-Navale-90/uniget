@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:fpdart/fpdart.dart",
+    "package:core/src/error/failures.dart"
+  ]
+}

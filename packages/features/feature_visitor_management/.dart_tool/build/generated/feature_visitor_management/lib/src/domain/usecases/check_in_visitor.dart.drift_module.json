@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:equatable/equatable.dart",
+    "package:fpdart/fpdart.dart",
+    "package:injectable/injectable.dart",
+    "package:feature_visitor_management/src/domain/entities/visitor.dart",
+    "package:feature_visitor_management/src/domain/repositories/visitor_repository.dart"
+  ]
+}

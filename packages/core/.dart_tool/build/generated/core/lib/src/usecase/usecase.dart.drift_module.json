@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:equatable/equatable.dart",
+    "package:fpdart/fpdart.dart",
+    "package:core/src/error/failures.dart"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:drift/drift.dart",
+    "package:injectable/injectable.dart",
+    "package:core/src/database/app_database.dart",
+    "package:core/src/utils/logger.dart",
+    "package:core/src/sync/connectivity_service.dart",
+    "package:core/src/sync/sync_task.dart"
+  ]
+}

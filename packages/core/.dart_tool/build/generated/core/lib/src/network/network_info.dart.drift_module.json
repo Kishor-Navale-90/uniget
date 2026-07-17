@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:connectivity_plus/connectivity_plus.dart",
+    "package:injectable/injectable.dart"
+  ]
+}

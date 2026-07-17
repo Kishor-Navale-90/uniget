@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:drift/drift.dart",
+    "package:injectable/injectable.dart",
+    "package:core/src/database/app_database.dart"
+  ]
+}

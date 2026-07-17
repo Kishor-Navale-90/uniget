@@ -1,0 +1,1006 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'asset_local_database.dart';
+
+// ignore_for_file: type=lint
+class $AssetTableTable extends AssetTable
+    with TableInfo<$AssetTableTable, AssetTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $AssetTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+      'name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _categoryMeta =
+      const VerificationMeta('category');
+  @override
+  late final GeneratedColumn<String> category = GeneratedColumn<String>(
+      'category', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _qrCodeMeta = const VerificationMeta('qrCode');
+  @override
+  late final GeneratedColumn<String> qrCode = GeneratedColumn<String>(
+      'qr_code', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+      'status', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _departmentIdMeta =
+      const VerificationMeta('departmentId');
+  @override
+  late final GeneratedColumn<String> departmentId = GeneratedColumn<String>(
+      'department_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _departmentNameMeta =
+      const VerificationMeta('departmentName');
+  @override
+  late final GeneratedColumn<String> departmentName = GeneratedColumn<String>(
+      'department_name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _assignedToUserIdMeta =
+      const VerificationMeta('assignedToUserId');
+  @override
+  late final GeneratedColumn<String> assignedToUserId = GeneratedColumn<String>(
+      'assigned_to_user_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _assignedToUserNameMeta =
+      const VerificationMeta('assignedToUserName');
+  @override
+  late final GeneratedColumn<String> assignedToUserName =
+      GeneratedColumn<String>('assigned_to_user_name', aliasedName, true,
+          type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _locationMeta =
+      const VerificationMeta('location');
+  @override
+  late final GeneratedColumn<String> location = GeneratedColumn<String>(
+      'location', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _warrantyExpiryMeta =
+      const VerificationMeta('warrantyExpiry');
+  @override
+  late final GeneratedColumn<DateTime> warrantyExpiry =
+      GeneratedColumn<DateTime>('warranty_expiry', aliasedName, true,
+          type: DriftSqlType.dateTime, requiredDuringInsert: false);
+  static const VerificationMeta _lastSyncedAtMeta =
+      const VerificationMeta('lastSyncedAt');
+  @override
+  late final GeneratedColumn<DateTime> lastSyncedAt = GeneratedColumn<DateTime>(
+      'last_synced_at', aliasedName, true,
+      type: DriftSqlType.dateTime, requiredDuringInsert: false);
+  static const VerificationMeta _hasPendingLocalChangesMeta =
+      const VerificationMeta('hasPendingLocalChanges');
+  @override
+  late final GeneratedColumn<bool> hasPendingLocalChanges =
+      GeneratedColumn<bool>('has_pending_local_changes', aliasedName, false,
+          type: DriftSqlType.bool,
+          requiredDuringInsert: false,
+          defaultConstraints: GeneratedColumn.constraintIsAlways(
+              'CHECK ("has_pending_local_changes" IN (0, 1))'),
+          defaultValue: const Constant(false));
+  @override
+  List<GeneratedColumn> get $columns => [
+        id,
+        name,
+        category,
+        qrCode,
+        status,
+        departmentId,
+        departmentName,
+        assignedToUserId,
+        assignedToUserName,
+        location,
+        warrantyExpiry,
+        lastSyncedAt,
+        hasPendingLocalChanges
+      ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'asset_table';
+  @override
+  VerificationContext validateIntegrity(Insertable<AssetTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+          _nameMeta, name.isAcceptableOrUnknown(data['name']!, _nameMeta));
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('category')) {
+      context.handle(_categoryMeta,
+          category.isAcceptableOrUnknown(data['category']!, _categoryMeta));
+    } else if (isInserting) {
+      context.missing(_categoryMeta);
+    }
+    if (data.containsKey('qr_code')) {
+      context.handle(_qrCodeMeta,
+          qrCode.isAcceptableOrUnknown(data['qr_code']!, _qrCodeMeta));
+    } else if (isInserting) {
+      context.missing(_qrCodeMeta);
+    }
+    if (data.containsKey('status')) {
+      context.handle(_statusMeta,
+          status.isAcceptableOrUnknown(data['status']!, _statusMeta));
+    } else if (isInserting) {
+      context.missing(_statusMeta);
+    }
+    if (data.containsKey('department_id')) {
+      context.handle(
+          _departmentIdMeta,
+          departmentId.isAcceptableOrUnknown(
+              data['department_id']!, _departmentIdMeta));
+    } else if (isInserting) {
+      context.missing(_departmentIdMeta);
+    }
+    if (data.containsKey('department_name')) {
+      context.handle(
+          _departmentNameMeta,
+          departmentName.isAcceptableOrUnknown(
+              data['department_name']!, _departmentNameMeta));
+    } else if (isInserting) {
+      context.missing(_departmentNameMeta);
+    }
+    if (data.containsKey('assigned_to_user_id')) {
+      context.handle(
+          _assignedToUserIdMeta,
+          assignedToUserId.isAcceptableOrUnknown(
+              data['assigned_to_user_id']!, _assignedToUserIdMeta));
+    }
+    if (data.containsKey('assigned_to_user_name')) {
+      context.handle(
+          _assignedToUserNameMeta,
+          assignedToUserName.isAcceptableOrUnknown(
+              data['assigned_to_user_name']!, _assignedToUserNameMeta));
+    }
+    if (data.containsKey('location')) {
+      context.handle(_locationMeta,
+          location.isAcceptableOrUnknown(data['location']!, _locationMeta));
+    }
+    if (data.containsKey('warranty_expiry')) {
+      context.handle(
+          _warrantyExpiryMeta,
+          warrantyExpiry.isAcceptableOrUnknown(
+              data['warranty_expiry']!, _warrantyExpiryMeta));
+    }
+    if (data.containsKey('last_synced_at')) {
+      context.handle(
+          _lastSyncedAtMeta,
+          lastSyncedAt.isAcceptableOrUnknown(
+              data['last_synced_at']!, _lastSyncedAtMeta));
+    }
+    if (data.containsKey('has_pending_local_changes')) {
+      context.handle(
+          _hasPendingLocalChangesMeta,
+          hasPendingLocalChanges.isAcceptableOrUnknown(
+              data['has_pending_local_changes']!, _hasPendingLocalChangesMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  AssetTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return AssetTableData(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      name: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}name'])!,
+      category: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}category'])!,
+      qrCode: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}qr_code'])!,
+      status: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}status'])!,
+      departmentId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}department_id'])!,
+      departmentName: attachedDatabase.typeMapping.read(
+          DriftSqlType.string, data['${effectivePrefix}department_name'])!,
+      assignedToUserId: attachedDatabase.typeMapping.read(
+          DriftSqlType.string, data['${effectivePrefix}assigned_to_user_id']),
+      assignedToUserName: attachedDatabase.typeMapping.read(
+          DriftSqlType.string, data['${effectivePrefix}assigned_to_user_name']),
+      location: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}location']),
+      warrantyExpiry: attachedDatabase.typeMapping.read(
+          DriftSqlType.dateTime, data['${effectivePrefix}warranty_expiry']),
+      lastSyncedAt: attachedDatabase.typeMapping.read(
+          DriftSqlType.dateTime, data['${effectivePrefix}last_synced_at']),
+      hasPendingLocalChanges: attachedDatabase.typeMapping.read(
+          DriftSqlType.bool,
+          data['${effectivePrefix}has_pending_local_changes'])!,
+    );
+  }
+
+  @override
+  $AssetTableTable createAlias(String alias) {
+    return $AssetTableTable(attachedDatabase, alias);
+  }
+}
+
+class AssetTableData extends DataClass implements Insertable<AssetTableData> {
+  final String id;
+  final String name;
+  final String category;
+  final String qrCode;
+  final String status;
+  final String departmentId;
+  final String departmentName;
+  final String? assignedToUserId;
+  final String? assignedToUserName;
+  final String? location;
+  final DateTime? warrantyExpiry;
+  final DateTime? lastSyncedAt;
+
+  /// True while a locally-made change (e.g. a transfer) is still
+  /// sitting in `core`'s shared SyncQueue awaiting confirmation from
+  /// the server — surfaced in the UI as an "unsynced" badge.
+  final bool hasPendingLocalChanges;
+  const AssetTableData(
+      {required this.id,
+      required this.name,
+      required this.category,
+      required this.qrCode,
+      required this.status,
+      required this.departmentId,
+      required this.departmentName,
+      this.assignedToUserId,
+      this.assignedToUserName,
+      this.location,
+      this.warrantyExpiry,
+      this.lastSyncedAt,
+      required this.hasPendingLocalChanges});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['name'] = Variable<String>(name);
+    map['category'] = Variable<String>(category);
+    map['qr_code'] = Variable<String>(qrCode);
+    map['status'] = Variable<String>(status);
+    map['department_id'] = Variable<String>(departmentId);
+    map['department_name'] = Variable<String>(departmentName);
+    if (!nullToAbsent || assignedToUserId != null) {
+      map['assigned_to_user_id'] = Variable<String>(assignedToUserId);
+    }
+    if (!nullToAbsent || assignedToUserName != null) {
+      map['assigned_to_user_name'] = Variable<String>(assignedToUserName);
+    }
+    if (!nullToAbsent || location != null) {
+      map['location'] = Variable<String>(location);
+    }
+    if (!nullToAbsent || warrantyExpiry != null) {
+      map['warranty_expiry'] = Variable<DateTime>(warrantyExpiry);
+    }
+    if (!nullToAbsent || lastSyncedAt != null) {
+      map['last_synced_at'] = Variable<DateTime>(lastSyncedAt);
+    }
+    map['has_pending_local_changes'] = Variable<bool>(hasPendingLocalChanges);
+    return map;
+  }
+
+  AssetTableCompanion toCompanion(bool nullToAbsent) {
+    return AssetTableCompanion(
+      id: Value(id),
+      name: Value(name),
+      category: Value(category),
+      qrCode: Value(qrCode),
+      status: Value(status),
+      departmentId: Value(departmentId),
+      departmentName: Value(departmentName),
+      assignedToUserId: assignedToUserId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(assignedToUserId),
+      assignedToUserName: assignedToUserName == null && nullToAbsent
+          ? const Value.absent()
+          : Value(assignedToUserName),
+      location: location == null && nullToAbsent
+          ? const Value.absent()
+          : Value(location),
+      warrantyExpiry: warrantyExpiry == null && nullToAbsent
+          ? const Value.absent()
+          : Value(warrantyExpiry),
+      lastSyncedAt: lastSyncedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastSyncedAt),
+      hasPendingLocalChanges: Value(hasPendingLocalChanges),
+    );
+  }
+
+  factory AssetTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return AssetTableData(
+      id: serializer.fromJson<String>(json['id']),
+      name: serializer.fromJson<String>(json['name']),
+      category: serializer.fromJson<String>(json['category']),
+      qrCode: serializer.fromJson<String>(json['qrCode']),
+      status: serializer.fromJson<String>(json['status']),
+      departmentId: serializer.fromJson<String>(json['departmentId']),
+      departmentName: serializer.fromJson<String>(json['departmentName']),
+      assignedToUserId: serializer.fromJson<String?>(json['assignedToUserId']),
+      assignedToUserName:
+          serializer.fromJson<String?>(json['assignedToUserName']),
+      location: serializer.fromJson<String?>(json['location']),
+      warrantyExpiry: serializer.fromJson<DateTime?>(json['warrantyExpiry']),
+      lastSyncedAt: serializer.fromJson<DateTime?>(json['lastSyncedAt']),
+      hasPendingLocalChanges:
+          serializer.fromJson<bool>(json['hasPendingLocalChanges']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'name': serializer.toJson<String>(name),
+      'category': serializer.toJson<String>(category),
+      'qrCode': serializer.toJson<String>(qrCode),
+      'status': serializer.toJson<String>(status),
+      'departmentId': serializer.toJson<String>(departmentId),
+      'departmentName': serializer.toJson<String>(departmentName),
+      'assignedToUserId': serializer.toJson<String?>(assignedToUserId),
+      'assignedToUserName': serializer.toJson<String?>(assignedToUserName),
+      'location': serializer.toJson<String?>(location),
+      'warrantyExpiry': serializer.toJson<DateTime?>(warrantyExpiry),
+      'lastSyncedAt': serializer.toJson<DateTime?>(lastSyncedAt),
+      'hasPendingLocalChanges': serializer.toJson<bool>(hasPendingLocalChanges),
+    };
+  }
+
+  AssetTableData copyWith(
+          {String? id,
+          String? name,
+          String? category,
+          String? qrCode,
+          String? status,
+          String? departmentId,
+          String? departmentName,
+          Value<String?> assignedToUserId = const Value.absent(),
+          Value<String?> assignedToUserName = const Value.absent(),
+          Value<String?> location = const Value.absent(),
+          Value<DateTime?> warrantyExpiry = const Value.absent(),
+          Value<DateTime?> lastSyncedAt = const Value.absent(),
+          bool? hasPendingLocalChanges}) =>
+      AssetTableData(
+        id: id ?? this.id,
+        name: name ?? this.name,
+        category: category ?? this.category,
+        qrCode: qrCode ?? this.qrCode,
+        status: status ?? this.status,
+        departmentId: departmentId ?? this.departmentId,
+        departmentName: departmentName ?? this.departmentName,
+        assignedToUserId: assignedToUserId.present
+            ? assignedToUserId.value
+            : this.assignedToUserId,
+        assignedToUserName: assignedToUserName.present
+            ? assignedToUserName.value
+            : this.assignedToUserName,
+        location: location.present ? location.value : this.location,
+        warrantyExpiry:
+            warrantyExpiry.present ? warrantyExpiry.value : this.warrantyExpiry,
+        lastSyncedAt:
+            lastSyncedAt.present ? lastSyncedAt.value : this.lastSyncedAt,
+        hasPendingLocalChanges:
+            hasPendingLocalChanges ?? this.hasPendingLocalChanges,
+      );
+  AssetTableData copyWithCompanion(AssetTableCompanion data) {
+    return AssetTableData(
+      id: data.id.present ? data.id.value : this.id,
+      name: data.name.present ? data.name.value : this.name,
+      category: data.category.present ? data.category.value : this.category,
+      qrCode: data.qrCode.present ? data.qrCode.value : this.qrCode,
+      status: data.status.present ? data.status.value : this.status,
+      departmentId: data.departmentId.present
+          ? data.departmentId.value
+          : this.departmentId,
+      departmentName: data.departmentName.present
+          ? data.departmentName.value
+          : this.departmentName,
+      assignedToUserId: data.assignedToUserId.present
+          ? data.assignedToUserId.value
+          : this.assignedToUserId,
+      assignedToUserName: data.assignedToUserName.present
+          ? data.assignedToUserName.value
+          : this.assignedToUserName,
+      location: data.location.present ? data.location.value : this.location,
+      warrantyExpiry: data.warrantyExpiry.present
+          ? data.warrantyExpiry.value
+          : this.warrantyExpiry,
+      lastSyncedAt: data.lastSyncedAt.present
+          ? data.lastSyncedAt.value
+          : this.lastSyncedAt,
+      hasPendingLocalChanges: data.hasPendingLocalChanges.present
+          ? data.hasPendingLocalChanges.value
+          : this.hasPendingLocalChanges,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('AssetTableData(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('category: $category, ')
+          ..write('qrCode: $qrCode, ')
+          ..write('status: $status, ')
+          ..write('departmentId: $departmentId, ')
+          ..write('departmentName: $departmentName, ')
+          ..write('assignedToUserId: $assignedToUserId, ')
+          ..write('assignedToUserName: $assignedToUserName, ')
+          ..write('location: $location, ')
+          ..write('warrantyExpiry: $warrantyExpiry, ')
+          ..write('lastSyncedAt: $lastSyncedAt, ')
+          ..write('hasPendingLocalChanges: $hasPendingLocalChanges')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      id,
+      name,
+      category,
+      qrCode,
+      status,
+      departmentId,
+      departmentName,
+      assignedToUserId,
+      assignedToUserName,
+      location,
+      warrantyExpiry,
+      lastSyncedAt,
+      hasPendingLocalChanges);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is AssetTableData &&
+          other.id == this.id &&
+          other.name == this.name &&
+          other.category == this.category &&
+          other.qrCode == this.qrCode &&
+          other.status == this.status &&
+          other.departmentId == this.departmentId &&
+          other.departmentName == this.departmentName &&
+          other.assignedToUserId == this.assignedToUserId &&
+          other.assignedToUserName == this.assignedToUserName &&
+          other.location == this.location &&
+          other.warrantyExpiry == this.warrantyExpiry &&
+          other.lastSyncedAt == this.lastSyncedAt &&
+          other.hasPendingLocalChanges == this.hasPendingLocalChanges);
+}
+
+class AssetTableCompanion extends UpdateCompanion<AssetTableData> {
+  final Value<String> id;
+  final Value<String> name;
+  final Value<String> category;
+  final Value<String> qrCode;
+  final Value<String> status;
+  final Value<String> departmentId;
+  final Value<String> departmentName;
+  final Value<String?> assignedToUserId;
+  final Value<String?> assignedToUserName;
+  final Value<String?> location;
+  final Value<DateTime?> warrantyExpiry;
+  final Value<DateTime?> lastSyncedAt;
+  final Value<bool> hasPendingLocalChanges;
+  final Value<int> rowid;
+  const AssetTableCompanion({
+    this.id = const Value.absent(),
+    this.name = const Value.absent(),
+    this.category = const Value.absent(),
+    this.qrCode = const Value.absent(),
+    this.status = const Value.absent(),
+    this.departmentId = const Value.absent(),
+    this.departmentName = const Value.absent(),
+    this.assignedToUserId = const Value.absent(),
+    this.assignedToUserName = const Value.absent(),
+    this.location = const Value.absent(),
+    this.warrantyExpiry = const Value.absent(),
+    this.lastSyncedAt = const Value.absent(),
+    this.hasPendingLocalChanges = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  AssetTableCompanion.insert({
+    required String id,
+    required String name,
+    required String category,
+    required String qrCode,
+    required String status,
+    required String departmentId,
+    required String departmentName,
+    this.assignedToUserId = const Value.absent(),
+    this.assignedToUserName = const Value.absent(),
+    this.location = const Value.absent(),
+    this.warrantyExpiry = const Value.absent(),
+    this.lastSyncedAt = const Value.absent(),
+    this.hasPendingLocalChanges = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : id = Value(id),
+        name = Value(name),
+        category = Value(category),
+        qrCode = Value(qrCode),
+        status = Value(status),
+        departmentId = Value(departmentId),
+        departmentName = Value(departmentName);
+  static Insertable<AssetTableData> custom({
+    Expression<String>? id,
+    Expression<String>? name,
+    Expression<String>? category,
+    Expression<String>? qrCode,
+    Expression<String>? status,
+    Expression<String>? departmentId,
+    Expression<String>? departmentName,
+    Expression<String>? assignedToUserId,
+    Expression<String>? assignedToUserName,
+    Expression<String>? location,
+    Expression<DateTime>? warrantyExpiry,
+    Expression<DateTime>? lastSyncedAt,
+    Expression<bool>? hasPendingLocalChanges,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (name != null) 'name': name,
+      if (category != null) 'category': category,
+      if (qrCode != null) 'qr_code': qrCode,
+      if (status != null) 'status': status,
+      if (departmentId != null) 'department_id': departmentId,
+      if (departmentName != null) 'department_name': departmentName,
+      if (assignedToUserId != null) 'assigned_to_user_id': assignedToUserId,
+      if (assignedToUserName != null)
+        'assigned_to_user_name': assignedToUserName,
+      if (location != null) 'location': location,
+      if (warrantyExpiry != null) 'warranty_expiry': warrantyExpiry,
+      if (lastSyncedAt != null) 'last_synced_at': lastSyncedAt,
+      if (hasPendingLocalChanges != null)
+        'has_pending_local_changes': hasPendingLocalChanges,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  AssetTableCompanion copyWith(
+      {Value<String>? id,
+      Value<String>? name,
+      Value<String>? category,
+      Value<String>? qrCode,
+      Value<String>? status,
+      Value<String>? departmentId,
+      Value<String>? departmentName,
+      Value<String?>? assignedToUserId,
+      Value<String?>? assignedToUserName,
+      Value<String?>? location,
+      Value<DateTime?>? warrantyExpiry,
+      Value<DateTime?>? lastSyncedAt,
+      Value<bool>? hasPendingLocalChanges,
+      Value<int>? rowid}) {
+    return AssetTableCompanion(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      category: category ?? this.category,
+      qrCode: qrCode ?? this.qrCode,
+      status: status ?? this.status,
+      departmentId: departmentId ?? this.departmentId,
+      departmentName: departmentName ?? this.departmentName,
+      assignedToUserId: assignedToUserId ?? this.assignedToUserId,
+      assignedToUserName: assignedToUserName ?? this.assignedToUserName,
+      location: location ?? this.location,
+      warrantyExpiry: warrantyExpiry ?? this.warrantyExpiry,
+      lastSyncedAt: lastSyncedAt ?? this.lastSyncedAt,
+      hasPendingLocalChanges:
+          hasPendingLocalChanges ?? this.hasPendingLocalChanges,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (category.present) {
+      map['category'] = Variable<String>(category.value);
+    }
+    if (qrCode.present) {
+      map['qr_code'] = Variable<String>(qrCode.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (departmentId.present) {
+      map['department_id'] = Variable<String>(departmentId.value);
+    }
+    if (departmentName.present) {
+      map['department_name'] = Variable<String>(departmentName.value);
+    }
+    if (assignedToUserId.present) {
+      map['assigned_to_user_id'] = Variable<String>(assignedToUserId.value);
+    }
+    if (assignedToUserName.present) {
+      map['assigned_to_user_name'] = Variable<String>(assignedToUserName.value);
+    }
+    if (location.present) {
+      map['location'] = Variable<String>(location.value);
+    }
+    if (warrantyExpiry.present) {
+      map['warranty_expiry'] = Variable<DateTime>(warrantyExpiry.value);
+    }
+    if (lastSyncedAt.present) {
+      map['last_synced_at'] = Variable<DateTime>(lastSyncedAt.value);
+    }
+    if (hasPendingLocalChanges.present) {
+      map['has_pending_local_changes'] =
+          Variable<bool>(hasPendingLocalChanges.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('AssetTableCompanion(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('category: $category, ')
+          ..write('qrCode: $qrCode, ')
+          ..write('status: $status, ')
+          ..write('departmentId: $departmentId, ')
+          ..write('departmentName: $departmentName, ')
+          ..write('assignedToUserId: $assignedToUserId, ')
+          ..write('assignedToUserName: $assignedToUserName, ')
+          ..write('location: $location, ')
+          ..write('warrantyExpiry: $warrantyExpiry, ')
+          ..write('lastSyncedAt: $lastSyncedAt, ')
+          ..write('hasPendingLocalChanges: $hasPendingLocalChanges, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+abstract class _$AssetLocalDatabase extends GeneratedDatabase {
+  _$AssetLocalDatabase(QueryExecutor e) : super(e);
+  $AssetLocalDatabaseManager get managers => $AssetLocalDatabaseManager(this);
+  late final $AssetTableTable assetTable = $AssetTableTable(this);
+  @override
+  Iterable<TableInfo<Table, Object?>> get allTables =>
+      allSchemaEntities.whereType<TableInfo<Table, Object?>>();
+  @override
+  List<DatabaseSchemaEntity> get allSchemaEntities => [assetTable];
+}
+
+typedef $$AssetTableTableCreateCompanionBuilder = AssetTableCompanion Function({
+  required String id,
+  required String name,
+  required String category,
+  required String qrCode,
+  required String status,
+  required String departmentId,
+  required String departmentName,
+  Value<String?> assignedToUserId,
+  Value<String?> assignedToUserName,
+  Value<String?> location,
+  Value<DateTime?> warrantyExpiry,
+  Value<DateTime?> lastSyncedAt,
+  Value<bool> hasPendingLocalChanges,
+  Value<int> rowid,
+});
+typedef $$AssetTableTableUpdateCompanionBuilder = AssetTableCompanion Function({
+  Value<String> id,
+  Value<String> name,
+  Value<String> category,
+  Value<String> qrCode,
+  Value<String> status,
+  Value<String> departmentId,
+  Value<String> departmentName,
+  Value<String?> assignedToUserId,
+  Value<String?> assignedToUserName,
+  Value<String?> location,
+  Value<DateTime?> warrantyExpiry,
+  Value<DateTime?> lastSyncedAt,
+  Value<bool> hasPendingLocalChanges,
+  Value<int> rowid,
+});
+
+class $$AssetTableTableFilterComposer
+    extends Composer<_$AssetLocalDatabase, $AssetTableTable> {
+  $$AssetTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get category => $composableBuilder(
+      column: $table.category, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get qrCode => $composableBuilder(
+      column: $table.qrCode, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get status => $composableBuilder(
+      column: $table.status, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get departmentId => $composableBuilder(
+      column: $table.departmentId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get departmentName => $composableBuilder(
+      column: $table.departmentName,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get assignedToUserId => $composableBuilder(
+      column: $table.assignedToUserId,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get assignedToUserName => $composableBuilder(
+      column: $table.assignedToUserName,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get location => $composableBuilder(
+      column: $table.location, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get warrantyExpiry => $composableBuilder(
+      column: $table.warrantyExpiry,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get lastSyncedAt => $composableBuilder(
+      column: $table.lastSyncedAt, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<bool> get hasPendingLocalChanges => $composableBuilder(
+      column: $table.hasPendingLocalChanges,
+      builder: (column) => ColumnFilters(column));
+}
+
+class $$AssetTableTableOrderingComposer
+    extends Composer<_$AssetLocalDatabase, $AssetTableTable> {
+  $$AssetTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get category => $composableBuilder(
+      column: $table.category, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get qrCode => $composableBuilder(
+      column: $table.qrCode, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get status => $composableBuilder(
+      column: $table.status, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get departmentId => $composableBuilder(
+      column: $table.departmentId,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get departmentName => $composableBuilder(
+      column: $table.departmentName,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get assignedToUserId => $composableBuilder(
+      column: $table.assignedToUserId,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get assignedToUserName => $composableBuilder(
+      column: $table.assignedToUserName,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get location => $composableBuilder(
+      column: $table.location, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get warrantyExpiry => $composableBuilder(
+      column: $table.warrantyExpiry,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get lastSyncedAt => $composableBuilder(
+      column: $table.lastSyncedAt,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<bool> get hasPendingLocalChanges => $composableBuilder(
+      column: $table.hasPendingLocalChanges,
+      builder: (column) => ColumnOrderings(column));
+}
+
+class $$AssetTableTableAnnotationComposer
+    extends Composer<_$AssetLocalDatabase, $AssetTableTable> {
+  $$AssetTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get category =>
+      $composableBuilder(column: $table.category, builder: (column) => column);
+
+  GeneratedColumn<String> get qrCode =>
+      $composableBuilder(column: $table.qrCode, builder: (column) => column);
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<String> get departmentId => $composableBuilder(
+      column: $table.departmentId, builder: (column) => column);
+
+  GeneratedColumn<String> get departmentName => $composableBuilder(
+      column: $table.departmentName, builder: (column) => column);
+
+  GeneratedColumn<String> get assignedToUserId => $composableBuilder(
+      column: $table.assignedToUserId, builder: (column) => column);
+
+  GeneratedColumn<String> get assignedToUserName => $composableBuilder(
+      column: $table.assignedToUserName, builder: (column) => column);
+
+  GeneratedColumn<String> get location =>
+      $composableBuilder(column: $table.location, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get warrantyExpiry => $composableBuilder(
+      column: $table.warrantyExpiry, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get lastSyncedAt => $composableBuilder(
+      column: $table.lastSyncedAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get hasPendingLocalChanges => $composableBuilder(
+      column: $table.hasPendingLocalChanges, builder: (column) => column);
+}
+
+class $$AssetTableTableTableManager extends RootTableManager<
+    _$AssetLocalDatabase,
+    $AssetTableTable,
+    AssetTableData,
+    $$AssetTableTableFilterComposer,
+    $$AssetTableTableOrderingComposer,
+    $$AssetTableTableAnnotationComposer,
+    $$AssetTableTableCreateCompanionBuilder,
+    $$AssetTableTableUpdateCompanionBuilder,
+    (
+      AssetTableData,
+      BaseReferences<_$AssetLocalDatabase, $AssetTableTable, AssetTableData>
+    ),
+    AssetTableData,
+    PrefetchHooks Function()> {
+  $$AssetTableTableTableManager(_$AssetLocalDatabase db, $AssetTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$AssetTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$AssetTableTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$AssetTableTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String> name = const Value.absent(),
+            Value<String> category = const Value.absent(),
+            Value<String> qrCode = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            Value<String> departmentId = const Value.absent(),
+            Value<String> departmentName = const Value.absent(),
+            Value<String?> assignedToUserId = const Value.absent(),
+            Value<String?> assignedToUserName = const Value.absent(),
+            Value<String?> location = const Value.absent(),
+            Value<DateTime?> warrantyExpiry = const Value.absent(),
+            Value<DateTime?> lastSyncedAt = const Value.absent(),
+            Value<bool> hasPendingLocalChanges = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              AssetTableCompanion(
+            id: id,
+            name: name,
+            category: category,
+            qrCode: qrCode,
+            status: status,
+            departmentId: departmentId,
+            departmentName: departmentName,
+            assignedToUserId: assignedToUserId,
+            assignedToUserName: assignedToUserName,
+            location: location,
+            warrantyExpiry: warrantyExpiry,
+            lastSyncedAt: lastSyncedAt,
+            hasPendingLocalChanges: hasPendingLocalChanges,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            required String name,
+            required String category,
+            required String qrCode,
+            required String status,
+            required String departmentId,
+            required String departmentName,
+            Value<String?> assignedToUserId = const Value.absent(),
+            Value<String?> assignedToUserName = const Value.absent(),
+            Value<String?> location = const Value.absent(),
+            Value<DateTime?> warrantyExpiry = const Value.absent(),
+            Value<DateTime?> lastSyncedAt = const Value.absent(),
+            Value<bool> hasPendingLocalChanges = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              AssetTableCompanion.insert(
+            id: id,
+            name: name,
+            category: category,
+            qrCode: qrCode,
+            status: status,
+            departmentId: departmentId,
+            departmentName: departmentName,
+            assignedToUserId: assignedToUserId,
+            assignedToUserName: assignedToUserName,
+            location: location,
+            warrantyExpiry: warrantyExpiry,
+            lastSyncedAt: lastSyncedAt,
+            hasPendingLocalChanges: hasPendingLocalChanges,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$AssetTableTableProcessedTableManager = ProcessedTableManager<
+    _$AssetLocalDatabase,
+    $AssetTableTable,
+    AssetTableData,
+    $$AssetTableTableFilterComposer,
+    $$AssetTableTableOrderingComposer,
+    $$AssetTableTableAnnotationComposer,
+    $$AssetTableTableCreateCompanionBuilder,
+    $$AssetTableTableUpdateCompanionBuilder,
+    (
+      AssetTableData,
+      BaseReferences<_$AssetLocalDatabase, $AssetTableTable, AssetTableData>
+    ),
+    AssetTableData,
+    PrefetchHooks Function()>;
+
+class $AssetLocalDatabaseManager {
+  final _$AssetLocalDatabase _db;
+  $AssetLocalDatabaseManager(this._db);
+  $$AssetTableTableTableManager get assetTable =>
+      $$AssetTableTableTableManager(_db, _db.assetTable);
+}

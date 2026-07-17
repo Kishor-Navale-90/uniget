@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:injectable/injectable.dart",
+    "package:feature_asset_management/src/data/local/asset_local_database.dart",
+    "package:feature_asset_management/src/data/models/asset_model.dart"
+  ]
+}

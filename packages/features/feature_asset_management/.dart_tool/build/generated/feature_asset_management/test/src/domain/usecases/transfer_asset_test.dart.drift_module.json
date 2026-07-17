@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:feature_asset_management/src/domain/repositories/asset_repository.dart",
+    "package:feature_asset_management/src/domain/usecases/transfer_asset.dart",
+    "package:fpdart/fpdart.dart",
+    "package:flutter_test/flutter_test.dart",
+    "package:mocktail/mocktail.dart"
+  ]
+}

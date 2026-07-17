@@ -1,0 +1,41 @@
+name: uniget_workspace
+
+packages:
+  - apps/**
+  - packages/**
+  - packages/features/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    run: melos exec -- "flutter analyze --fatal-infos"
+    description: Static analysis across every package — run before every PR.
+
+  test:
+    run: melos exec --dir-exists=test -- "flutter test --coverage"
+    description: Unit + bloc tests, package by package (only packages with a test/ dir).
+
+  format:
+    run: melos exec -- "dart format --set-exit-if-changed ."
+    description: Enforce formatting across the whole workspace.
+
+  build_runner:
+    run: melos exec --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+    concurrency: 1
+    description: >
+      Regenerate all *.g.dart / *.config.dart files (Drift tables,
+      injectable DI graphs, freezed models) across every package that
+      needs codegen. MUST run one package at a time, in dependency
+      order (melos exec's default is concurrent, which races — core's
+      generated app_database.g.dart may not exist yet when a feature
+      package's build starts, and every package's injectable
+      micro-package module (see core/lib/src/di/core_injectable_init.dart)
+      must exist on disk before apps/uniget_app's build_runner pass
+      composes them in injection.dart). `concurrency: 1` combined with
+      melos's topological package ordering is what makes this safe.
+
+  clean:
+    run: melos exec -- "flutter clean"

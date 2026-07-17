@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:equatable/equatable.dart",
+    "package:feature_asset_management/src/domain/entities/asset_status.dart"
+  ]
+}

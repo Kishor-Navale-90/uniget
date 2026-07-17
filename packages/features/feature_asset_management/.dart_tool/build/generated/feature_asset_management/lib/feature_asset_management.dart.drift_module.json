@@ -1,0 +1,18 @@
+{
+  "elements": {},
+  "imports": [
+    "package:feature_asset_management/src/domain/entities/asset.dart",
+    "package:feature_asset_management/src/domain/entities/asset_status.dart",
+    "package:feature_asset_management/src/domain/repositories/asset_repository.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_event.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_state.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_event.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_state.dart",
+    "package:feature_asset_management/src/presentation/pages/asset_list_page.dart",
+    "package:feature_asset_management/src/presentation/pages/asset_detail_page.dart",
+    "package:feature_asset_management/src/di/asset_injection.dart",
+    "package:feature_asset_management/src/di/asset_injection.module.dart"
+  ]
+}

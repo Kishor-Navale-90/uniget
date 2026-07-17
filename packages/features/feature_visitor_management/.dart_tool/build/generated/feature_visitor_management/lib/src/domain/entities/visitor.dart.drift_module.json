@@ -1,0 +1,7 @@
+{
+  "elements": {},
+  "imports": [
+    "package:equatable/equatable.dart",
+    "package:feature_visitor_management/src/domain/entities/visitor_status.dart"
+  ]
+}

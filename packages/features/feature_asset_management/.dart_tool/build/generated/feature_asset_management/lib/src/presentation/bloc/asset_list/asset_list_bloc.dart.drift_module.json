@@ -1,0 +1,12 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:flutter_bloc/flutter_bloc.dart",
+    "package:injectable/injectable.dart",
+    "package:feature_asset_management/src/domain/repositories/asset_repository.dart",
+    "package:feature_asset_management/src/domain/usecases/get_assets.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_event.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_list/asset_list_state.dart"
+  ]
+}

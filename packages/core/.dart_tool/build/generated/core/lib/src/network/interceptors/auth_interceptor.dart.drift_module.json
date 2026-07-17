@@ -1,0 +1,8 @@
+{
+  "elements": {},
+  "imports": [
+    "package:dio/dio.dart",
+    "package:injectable/injectable.dart",
+    "package:core/src/auth/session.dart"
+  ]
+}

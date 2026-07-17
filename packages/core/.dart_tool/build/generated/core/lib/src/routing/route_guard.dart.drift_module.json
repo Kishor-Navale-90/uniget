@@ -1,0 +1,6 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/src/auth/session.dart"
+  ]
+}

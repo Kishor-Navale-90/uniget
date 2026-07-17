@@ -1,0 +1,15 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:fpdart/fpdart.dart",
+    "package:injectable/injectable.dart",
+    "package:uuid/uuid.dart",
+    "package:feature_asset_management/src/domain/entities/asset.dart",
+    "package:feature_asset_management/src/domain/entities/asset_dashboard_stats.dart",
+    "package:feature_asset_management/src/domain/entities/asset_status.dart",
+    "package:feature_asset_management/src/domain/repositories/asset_repository.dart",
+    "package:feature_asset_management/src/data/datasources/asset_local_datasource.dart",
+    "package:feature_asset_management/src/data/datasources/asset_remote_datasource.dart"
+  ]
+}

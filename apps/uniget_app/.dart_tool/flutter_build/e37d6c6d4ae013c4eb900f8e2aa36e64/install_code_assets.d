@@ -1,0 +1,1 @@
+ /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/apps/uniget_app/.dart_tool/flutter_build/e37d6c6d4ae013c4eb900f8e2aa36e64/native_assets.json:  /Users/rupeshkumar/Documents/Hackathon/Project/gateflow_flutter/.dart_tool/hooks_runner/shared/objective_c/build/9f22e6a04e/objective_c.dylib

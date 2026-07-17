@@ -1,0 +1,9 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/core.dart",
+    "package:dio/dio.dart",
+    "package:injectable/injectable.dart",
+    "package:feature_asset_management/src/data/models/asset_model.dart"
+  ]
+}

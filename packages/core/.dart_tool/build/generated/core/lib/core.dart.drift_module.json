@@ -1,0 +1,28 @@
+{
+  "elements": {},
+  "imports": [
+    "package:core/src/error/failures.dart",
+    "package:core/src/error/exceptions.dart",
+    "package:core/src/usecase/usecase.dart",
+    "package:core/src/network/network_info.dart",
+    "package:core/src/network/dio_client.dart",
+    "package:core/src/notifications/push_notification_service.dart",
+    "package:core/src/audit/audit_event_table.dart",
+    "package:core/src/audit/audit_logger.dart",
+    "package:core/src/database/app_database.dart",
+    "package:core/src/database/sqlite_connection.dart",
+    "package:core/src/sync/sync_engine.dart",
+    "package:core/src/sync/sync_task.dart",
+    "package:core/src/sync/connectivity_service.dart",
+    "package:core/src/di/core_injectable_init.dart",
+    "package:core/src/di/core_injectable_init.module.dart",
+    "package:core/src/di/core_module.dart",
+    "package:core/src/auth/session.dart",
+    "package:core/src/routing/route_guard.dart",
+    "package:core/src/theme/app_theme.dart",
+    "package:core/src/theme/responsive.dart",
+    "package:core/src/constants/app_constants.dart",
+    "package:core/src/utils/logger.dart",
+    "package:core/src/utils/result_extensions.dart"
+  ]
+}

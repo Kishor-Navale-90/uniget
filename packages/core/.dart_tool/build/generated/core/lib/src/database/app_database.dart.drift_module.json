@@ -1,0 +1,49 @@
+{
+  "elements": {
+    "AppDatabase": {
+      "id": {
+        "library_uri": "package:core/src/database/app_database.dart",
+        "name": "AppDatabase"
+      },
+      "declaration": {
+        "source_uri": "package:core/src/database/app_database.dart",
+        "offset": 1430,
+        "name": "AppDatabase"
+      },
+      "references": [
+        {
+          "library_uri": "package:core/src/database/tables/sync_queue_table.dart",
+          "name": "sync_queue"
+        },
+        {
+          "library_uri": "package:core/src/audit/audit_event_table.dart",
+          "name": "audit_event"
+        }
+      ],
+      "type": "database",
+      "tables": [
+        {
+          "library_uri": "package:core/src/database/tables/sync_queue_table.dart",
+          "name": "sync_queue"
+        },
+        {
+          "library_uri": "package:core/src/audit/audit_event_table.dart",
+          "name": "audit_event"
+        }
+      ],
+      "views": [],
+      "includes": [],
+      "queries": [],
+      "schema_version": 1,
+      "daos": [],
+      "has_constructor_arg": true
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart",
+    "package:injectable/injectable.dart",
+    "package:core/src/audit/audit_event_table.dart",
+    "package:core/src/database/sqlite_connection.dart",
+    "package:core/src/database/tables/sync_queue_table.dart"
+  ]
+}

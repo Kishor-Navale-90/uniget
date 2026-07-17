@@ -1,0 +1,14 @@
+{
+  "elements": {},
+  "imports": [
+    "package:bloc_test/bloc_test.dart",
+    "package:core/core.dart",
+    "package:feature_asset_management/src/domain/usecases/transfer_asset.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_bloc.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_event.dart",
+    "package:feature_asset_management/src/presentation/bloc/asset_transfer/asset_transfer_state.dart",
+    "package:fpdart/fpdart.dart",
+    "package:flutter_test/flutter_test.dart",
+    "package:mocktail/mocktail.dart"
+  ]
+}

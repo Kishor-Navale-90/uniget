@@ -1,0 +1,324 @@
+{
+  "elements": {
+    "asset_table": {
+      "id": {
+        "library_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+        "name": "asset_table"
+      },
+      "declaration": {
+        "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+        "offset": 276,
+        "name": "AssetTable"
+      },
+      "references": [],
+      "type": "table",
+      "columns": [
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "id",
+          "nameInDart": "id",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 320,
+            "name": "id"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "name",
+          "nameInDart": "name",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 353,
+            "name": "name"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "category",
+          "nameInDart": "category",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 388,
+            "name": "category"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "qr_code",
+          "nameInDart": "qrCode",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 427,
+            "name": "qrCode"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "status",
+          "nameInDart": "status",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 464,
+            "name": "status"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "department_id",
+          "nameInDart": "departmentId",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 531,
+            "name": "departmentId"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": false,
+          "nameInSql": "department_name",
+          "nameInDart": "departmentName",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 574,
+            "name": "departmentName"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "assigned_to_user_id",
+          "nameInDart": "assignedToUserId",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 619,
+            "name": "assignedToUserId"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "assigned_to_user_name",
+          "nameInDart": "assignedToUserName",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 677,
+            "name": "assignedToUserName"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "string"
+          },
+          "nullable": true,
+          "nameInSql": "location",
+          "nameInDart": "location",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 737,
+            "name": "location"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "dateTime"
+          },
+          "nullable": true,
+          "nameInSql": "warranty_expiry",
+          "nameInDart": "warrantyExpiry",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 791,
+            "name": "warrantyExpiry"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "dateTime"
+          },
+          "nullable": true,
+          "nameInSql": "last_synced_at",
+          "nameInDart": "lastSyncedAt",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 855,
+            "name": "lastSyncedAt"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": null,
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": null,
+          "constraints": [],
+          "customConstraints": null
+        },
+        {
+          "sqlType": {
+            "builtin": "bool"
+          },
+          "nullable": false,
+          "nameInSql": "has_pending_local_changes",
+          "nameInDart": "hasPendingLocalChanges",
+          "declaration": {
+            "source_uri": "package:feature_asset_management/src/data/local/asset_table.dart",
+            "offset": 1112,
+            "name": "hasPendingLocalChanges"
+          },
+          "typeConverter": null,
+          "clientDefaultCode": null,
+          "defaultArgument": {
+            "elements": [
+              "const ",
+              {
+                "lexeme": "Constant",
+                "import_uri": "package:drift/src/runtime/query_builder/query_builder.dart"
+              },
+              "(false)"
+            ]
+          },
+          "overriddenJsonName": null,
+          "referenceName": null,
+          "documentationComment": "/// True while a locally-made change (e.g. a transfer) is still\n/// sitting in `core`'s shared SyncQueue awaiting confirmation from\n/// the server — surfaced in the UI as an \"unsynced\" badge.",
+          "constraints": [],
+          "customConstraints": null
+        }
+      ],
+      "existing_data_class": null,
+      "table_constraints": [
+        {
+          "type": "primary_key",
+          "columns": [
+            "id"
+          ]
+        }
+      ],
+      "custom_parent_class": null,
+      "interfaces_for_row_class": [],
+      "fixed_entity_info_name": null,
+      "base_dart_name": "AssetTable",
+      "row_class_name": "AssetTableData",
+      "companion_class_name": null,
+      "without_rowid": false,
+      "strict": false,
+      "write_default_constraints": true,
+      "custom_constraints": [],
+      "attached_indices": []
+    }
+  },
+  "imports": [
+    "package:drift/drift.dart"
+  ]
+}
