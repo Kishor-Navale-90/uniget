@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find / -maxdepth 4 -iname \"flutter\" -type d)",
+      "Read(//Users/rupeshkumar/fvm/**)",
+      "Bash(flutter --version)",
+      "Read(//Users/rupeshkumar/Projects/**)",
+      "Bash(env)",
+      "Bash(flutter pub *)",
+      "Bash(flutter build *)"
+    ]
+  }
+}

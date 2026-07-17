@@ -13,6 +13,10 @@ class AppConstants {
 
   static const flavorName = String.fromEnvironment('FLAVOR', defaultValue: 'dev');
 
+  static const supabaseUrl = String.fromEnvironment('SUPABASE_URL');
+
+  static const supabaseAnonKey = String.fromEnvironment('SUPABASE_ANON_KEY');
+
   /// How often the SyncEngine sweeps the queue even without a
   /// connectivity-change event (belt and braces for missed events).
   static const syncSweepInterval = Duration(minutes: 2);

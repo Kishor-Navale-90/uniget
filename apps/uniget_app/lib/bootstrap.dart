@@ -24,7 +24,7 @@ Future<void> bootstrap() async {
       // Must run before configureDependencies() — CoreModule's
       // SupabaseClient provider reads Supabase.instance.client, which
       // only exists once this resolves (see supabase/README.md).
-      await Supabase.initialize(url: AppConstants.supabaseUrl, anonKey: AppConstants.supabaseAnonKey);
+      await Supabase.initialize(url: AppConstants.supabaseUrl, publishableKey: AppConstants.supabaseAnonKey);
       await configureDependencies();
       runApp(const UnigetApp());
     },

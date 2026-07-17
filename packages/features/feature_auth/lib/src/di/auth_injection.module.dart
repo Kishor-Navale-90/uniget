@@ -48,15 +48,15 @@ class FeatureAuthPackageModule extends _i526.MicroPackageModule {
           gh<_i494.SessionManager>(),
           gh<_i494.NetworkInfo>(),
         ));
-    gh.factory<_i915.RequestRegistrationOtp>(
-        () => _i915.RequestRegistrationOtp(gh<_i1063.AuthRepository>()));
+    gh.factory<_i712.CheckRegistrationEmail>(
+        () => _i712.CheckRegistrationEmail(gh<_i1063.AuthRepository>()));
     gh.factory<_i480.GetCurrentSession>(
         () => _i480.GetCurrentSession(gh<_i1063.AuthRepository>()));
     gh.factory<_i480.Logout>(() => _i480.Logout(gh<_i1063.AuthRepository>()));
-    gh.factory<_i712.CheckRegistrationEmail>(
-        () => _i712.CheckRegistrationEmail(gh<_i1063.AuthRepository>()));
     gh.factory<_i590.LoginWithPassword>(
         () => _i590.LoginWithPassword(gh<_i1063.AuthRepository>()));
+    gh.factory<_i915.RequestRegistrationOtp>(
+        () => _i915.RequestRegistrationOtp(gh<_i1063.AuthRepository>()));
     gh.factory<_i375.SetPassword>(
         () => _i375.SetPassword(gh<_i1063.AuthRepository>()));
     gh.factory<_i741.VerifyRegistrationOtp>(

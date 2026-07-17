@@ -30,8 +30,10 @@ dependencies:
   path: ^1.9.0
   # Secure session/token storage
   flutter_secure_storage: ^9.2.2
+  # Backend client (auth, Postgres, realtime, storage)
+  supabase_flutter: ^2.8.0
   # Immutable models/entities
-  freezed_annotation: ^2.4.4
+  freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
   equatable: ^2.0.5
   # Logging
@@ -42,7 +44,7 @@ dev_dependencies:
     sdk: flutter
   build_runner: ^2.4.12
   injectable_generator: ^2.6.2
-  freezed: ^2.5.7
+  freezed: ^3.0.0
   json_serializable: ^6.8.0
   drift_dev: ^2.19.0
   very_good_analysis: ^6.0.0
