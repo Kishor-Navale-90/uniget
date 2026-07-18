@@ -7,7 +7,6 @@
 import 'dart:async' as _i687;
 
 import 'package:core/core.dart' as _i494;
-import 'package:dio/dio.dart' as _i361;
 import 'package:feature_auth/src/data/datasources/auth_local_datasource.dart'
     as _i928;
 import 'package:feature_auth/src/data/datasources/auth_remote_datasource.dart'
@@ -33,13 +32,14 @@ import 'package:feature_auth/src/presentation/bloc/login/login_bloc.dart'
 import 'package:feature_auth/src/presentation/bloc/registration/registration_bloc.dart'
     as _i963;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:supabase_flutter/supabase_flutter.dart' as _i454;
 
 class FeatureAuthPackageModule extends _i526.MicroPackageModule {
 // initializes the registration of main-scope dependencies inside of GetIt
   @override
   _i687.FutureOr<void> init(_i526.GetItHelper gh) {
     gh.lazySingleton<_i337.AuthRemoteDataSource>(
-        () => _i337.AuthRemoteDataSourceImpl(gh<_i361.Dio>()));
+        () => _i337.AuthRemoteDataSourceImpl(gh<_i454.SupabaseClient>()));
     gh.lazySingleton<_i928.AuthLocalDataSource>(
         () => _i928.AuthLocalDataSourceImpl(gh<_i494.SessionManager>()));
     gh.lazySingleton<_i1063.AuthRepository>(() => _i953.AuthRepositoryImpl(

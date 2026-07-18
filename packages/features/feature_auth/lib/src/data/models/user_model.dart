@@ -16,13 +16,18 @@ class UserModel {
     this.departmentName,
   });
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+  /// Parses the row shape returned by Supabase's `get_my_profile` RPC
+  /// (see `supabase/migrations/20260717000003_profile_rpc.sql`) —
+  /// snake_case column names, unlike the REST mock contract's
+  /// camelCase, since this comes straight from Postgres rather than a
+  /// hand-written JSON response.
+  factory UserModel.fromProfile(Map<String, dynamic> json) => UserModel(
         id: json['id'] as String,
         name: json['name'] as String,
         email: json['email'] as String,
         role: UserRole.values.byName(json['role'] as String),
-        departmentId: json['departmentId'] as String?,
-        departmentName: json['departmentName'] as String?,
+        departmentId: json['department_id'] as String?,
+        departmentName: json['department_name'] as String?,
       );
 
   final String id;

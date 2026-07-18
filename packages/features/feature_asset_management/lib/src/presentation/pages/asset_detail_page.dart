@@ -1,6 +1,7 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 
 import '../bloc/asset_transfer/asset_transfer_bloc.dart';
 import '../bloc/asset_transfer/asset_transfer_event.dart';
@@ -19,7 +20,7 @@ class AssetDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => context.read<AssetTransferBloc>(),
+      create: (_) => GetIt.instance<AssetTransferBloc>(),
       child: Scaffold(
         appBar: AppBar(title: Text('Asset $assetId')),
         body: BlocConsumer<AssetTransferBloc, AssetTransferState>(

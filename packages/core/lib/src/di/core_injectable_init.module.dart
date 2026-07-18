@@ -24,6 +24,7 @@ import 'package:dio/dio.dart' as _i361;
 import 'package:firebase_messaging/firebase_messaging.dart' as _i892;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i558;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:supabase_flutter/supabase_flutter.dart' as _i454;
 
 class CorePackageModule extends _i526.MicroPackageModule {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -37,6 +38,7 @@ class CorePackageModule extends _i526.MicroPackageModule {
     gh.lazySingleton<_i558.FlutterSecureStorage>(
         () => coreModule.secureStorage);
     gh.lazySingleton<_i895.Connectivity>(() => coreModule.connectivity);
+    gh.lazySingleton<_i454.SupabaseClient>(() => coreModule.supabaseClient);
     gh.lazySingleton<_i123.RetryInterceptor>(() => _i123.RetryInterceptor());
     gh.lazySingleton<_i614.LoggingInterceptor>(
         () => _i614.LoggingInterceptor());

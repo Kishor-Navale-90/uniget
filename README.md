@@ -129,20 +129,32 @@ before anything that depends on your package.
 
 ## Auth flow
 
+**Backend: Supabase** (`supabase_flutter`, direct client calls — not a
+custom REST API). `docs/api/auth.md`'s REST contract predates this
+decision and is superseded — see `supabase/README.md` for the actual
+schema/RPCs/Edge Functions `feature_auth` talks to.
+
 No SSO, no self-service sign-up. A Super Admin (or, once
 `feature_employee_management` exists — not built yet — a manager)
 pre-adds an employee with their **official email**; the account exists
-but is inactive. The employee then self-activates:
+but is inactive. The employee then self-activates via Supabase Auth
+directly:
 
 ```
-check-email → otp/request → otp/verify → set-password (auto-login)
+check-email (is_eligible_for_registration RPC)
+  → otp/request (signInWithOtp)
+  → otp/verify (verifyOTP — establishes the Supabase session)
+  → set-password (updateUser, using that session — auto-login)
 ```
 
-After that, `POST /v1/auth/login` (email + password) is the regular
-sign-in path. Full endpoint contracts for the backend team: `docs/api/auth.md`.
-Roles (`core/lib/src/auth/session.dart`'s `UserRole` enum):
-`superAdmin, manager, itAdmin, adminTeam, security, employee` —
-visitors never get a persistent account (guest session only).
+After that, `signInWithPassword` (email + password) is the regular
+sign-in path. `CoreModule.supabaseClient` (`core/lib/src/di/core_module.dart`)
+is the one `SupabaseClient` instance every repository uses —
+`Supabase.initialize()` runs once in `bootstrap()` before
+`configureDependencies()`. Roles (`core/lib/src/auth/session.dart`'s
+`UserRole` enum): `superAdmin, manager, itAdmin, adminTeam, security,
+employee` — visitors never get a persistent account (guest session
+only).
 
 ## Firebase / push notifications
 
